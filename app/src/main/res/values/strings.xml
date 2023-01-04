@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Produits</string>
+
+    <string name="home_page_title">Accueil</string>
+    <string name="home_page_last_product_section">Dernières sélections</string>
+
+    <!--Page mes selections-->
+    <string name="selection_page_title">Mes sélections</string>
+
+    <string name="item_product_name">Nom du produit</string>
+    <string name="item_product_description">Description du produit</string>
 </resources>
