@@ -7,6 +7,32 @@
     <!--Page mes selections-->
     <string name="selection_page_title">Mes sélections</string>
 
+
+    <!--Page ajout de produits-->
+    <string name="add_product_page_title">Ajouter un produit</string>
+    <string name="add_product_page_upload_button">Charger image</string>
+    <string name="add_product_page_name_button">@string/item_product_name</string>
+    <string name="add_product_page_description_button">@string/item_product_description</string>
+
+    <string-array name="add_product_page_categorie_input">
+        <item>Catégorie: Massages</item>
+        <item>Catégorie: Fleurs</item>
+        <item>Catégorie: Traiteur</item>
+    </string-array>
+
+        <string-array name="add_product_page_budget_input">
+        <item>Budget: De 20€ à 30€</item>
+        <item>Budget: De 30€ à 50€</item>
+        <item>Budget: Au delà de 50€</item>
+        </string-array>
+
+    <string name="add_product_page_confirm_button">Confirmer</string>
+    
+    <!--Fenetre popup de détail-->
+    <string name="popup_product_name">Product name</string>
+    <string name="popup_product_description_title">Description</string>
+
+    <!--Product customise-->
     <string name="item_product_name">Nom du produit</string>
     <string name="item_product_description">Description du produit</string>
 </resources>
