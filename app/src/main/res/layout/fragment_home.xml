@@ -31,7 +31,7 @@
         android:layout_height="200dp"
         android:src="@drawable/tulipes" />-->
 
-    <!--Reçoit les images-->
+    <!--Container qui reçoit les images-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/horizontal_recycler_view"
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/home_page_last_product_section"
-        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="@dimen/default_margin"
         android:fontFamily="@font/lato_bold"
         android:textColor="@color/darkGray"
@@ -53,4 +53,13 @@
         />
 
 
+    <!--Container qui reçoit les images-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vertical_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/default_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
 </LinearLayout>

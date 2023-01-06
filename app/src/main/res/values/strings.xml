@@ -32,7 +32,7 @@
     <string name="popup_product_name">Product name</string>
     <string name="popup_product_description_title">Description</string>-->
 
-    <!--Product customise
+    <!--Product customise-->
     <string name="item_product_name">Nom du produit</string>
-    <string name="item_product_description">Description du produit</string>-->
+    <string name="item_product_description">Description du produit</string>
 </resources>

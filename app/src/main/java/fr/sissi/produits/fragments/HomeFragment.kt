@@ -14,15 +14,16 @@ class HomeFragment : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saveInstanceState: Bundle?): View? {
+        val view = inflater?.inflate(R.layout.fragment_home, container,false)
 
-//je récupère la vue
-        val view = inflater?.inflate(R.layout.fragment_home, container, false)
-//je récupère le recyclerView
+        //récupération de la vue du recyclerView horizontal
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
-        //si horizontalRecycler n'est pas vide il s'affiche
+        //les produits se chargent automatiquement
+        //je précise quel layout je veux utiliser --> ProductAdapter avec juste un id
         if (horizontalRecyclerView != null) {
-            horizontalRecyclerView.adapter = ProductAdapter()
+            horizontalRecyclerView.adapter = ProductAdapter(R.layout.item_horizontal_product)
         }
+
         return  view
     }
 
