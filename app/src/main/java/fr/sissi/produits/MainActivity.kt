@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         //supportFragment gère les fragment sur Android et begin permet la manipulation de ces derniers
         val transaction = supportFragmentManager.beginTransaction()
         //je remplace le container (layout fragment_container) par fragment HomeFragment
-        transaction.replace(R.id.fragment_container, HomeFragment())
+        transaction.replace(R.id.fragment_container, HomeFragment(this))
         //j'ajoute un retour null
         transaction.addToBackStack(null)
         //j'envoie les changements
