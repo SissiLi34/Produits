@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import fr.sissi.produits.R
 import fr.sissi.produits.adapter.ProductAdapter
+import fr.sissi.produits.adapter.ProductItemDecoration
 
 //class avec héritage de Fragment
 class HomeFragment : Fragment() {
@@ -22,6 +23,12 @@ class HomeFragment : Fragment() {
         //je précise quel layout je veux utiliser --> ProductAdapter avec juste un id
         if (horizontalRecyclerView != null) {
             horizontalRecyclerView.adapter = ProductAdapter(R.layout.item_horizontal_product)
+
+        //récupération du second recyclerView vertical
+            val  verticalRecyclerView = view.findViewById<RecyclerView>(R.id.vertical_recycler_view)
+            verticalRecyclerView. adapter = ProductAdapter(R.layout.item_vertical_product)
+            //je rajoute l'espace d'itemDecoration
+            verticalRecyclerView.addItemDecoration(ProductItemDecoration())
         }
 
         return  view
