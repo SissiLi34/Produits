@@ -8,11 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="grey">#ebe6e4</color>
-    <color name="darkGray">#202122</color>
+   <color name="grey">#ebe6e4</color>
+
     <color name="lightGray">#989cao</color>
-    <color name="brown">#805050</color>
-    <color name="gold">#c09628</color>
-    <color name="pink">#cbacac</color>
-    <color name="red">#741010</color>
+     <color name="darkGray">#202122</color>
+     <color name="brown">#805050</color>
+     <color name="gold">#c09628</color>
+     <color name="pink">#cbacac</color>
+     <color name="red">#741010</color>
 </resources>

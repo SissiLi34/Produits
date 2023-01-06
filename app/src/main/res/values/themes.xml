@@ -14,24 +14,24 @@
         <!-- Customize your theme here. -->
 
         <!--Creer le composant du titre par defaut-->
-        <!--pack qui regroupe différentes propriétés qui composent un design-->
+        <!--pack qui regroupe différentes propriétés qui composent un design
         <style name="DefaultTextStyle">
             <item name="android:textColor">@color/lightGray</item>
             <item name="android:textSize">18sp</item>
             <item name="android:fontFamily">@font/lato</item>
-        </style>
+        </style>-->
 
-        <!--Les sous-titres ont la même caractéristique que l'ecriture par défaut-->
+        <!--Les sous-titres ont la même caractéristique que l'ecriture par défaut
         <style name="SubtitleTextStyle" parent="DefaultTextStyle">
             <item name="android:textColor">@color/darkGray</item>
             <item name="android:fontFamily">@font/lato_bold.ttf</item>
-        </style>
+        </style>-->
 
-        <!--Les titres ont la même caractéristique que les sous-titres mais en + grand-->
+        <!--Les titres ont la même caractéristique que les sous-titres mais en + grand
         <style name="TitleTextStyle" parent="SubtitleTextStyle">
             <item name="android:textSize">24sp</item>
             <item name="android:fontFamily">@font/lato_bold.ttf</item>
-        </style>
+        </style>-->
 
     </style>
 </resources>

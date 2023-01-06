@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">Produits</string>
+     <string name="app_name">Produits</string>
 
     <string name="home_page_title">Accueil</string>
     <string name="home_page_last_product_section">Dernières sélections</string>
 
-    <!--Page mes selections-->
-    <string name="selection_page_title">Mes sélections</string>
+   <!--  Page mes selections
+     <string name="selection_page_title">Mes sélections</string>-->
 
 
-    <!--Page ajout de produits-->
+    <!--Page ajout de produits
     <string name="add_product_page_title">Ajouter un produit</string>
     <string name="add_product_page_upload_button">Charger image</string>
     <string name="add_product_page_name_button">@string/item_product_name</string>
@@ -26,13 +26,13 @@
         <item>Budget: Au delà de 50€</item>
         </string-array>
 
-    <string name="add_product_page_confirm_button">Confirmer</string>
+    <string name="add_product_page_confirm_button">Confirmer</string>-->
     
-    <!--Fenetre popup de détail-->
+    <!--Fenetre popup de détail
     <string name="popup_product_name">Product name</string>
-    <string name="popup_product_description_title">Description</string>
+    <string name="popup_product_description_title">Description</string>-->
 
-    <!--Product customise-->
+    <!--Product customise
     <string name="item_product_name">Nom du produit</string>
-    <string name="item_product_description">Description du produit</string>
+    <string name="item_product_description">Description du produit</string>-->
 </resources>
