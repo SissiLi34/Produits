@@ -25,7 +25,10 @@ class HomeFragment (
         //créer une liste qui va stocker les produits
         val productList = arrayListOf<ProductModel>()
 
-        //enregistrer produit
+
+ /*     DONNÉES LOCALES EN DUR
+ 
+       //enregistrer produit
         productList.add(
             ProductModel(
             name = "Bouquet de tulipes",
@@ -57,6 +60,7 @@ class HomeFragment (
                 imageURL = "https://cdn.pixabay.com/photo/2017/12/23/15/54/food-3035432_1280.jpg",
                 liked = false
             ))
+*/
 
         //récupération de la vue du recyclerView horizontal avec les détails des produits
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
