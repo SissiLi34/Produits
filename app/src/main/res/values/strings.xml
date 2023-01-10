@@ -12,15 +12,15 @@
     <string name="add_product_page_title">Ajouter un produit</string>
     <string name="add_product_page_upload_button">Charger image</string>
     <string name="add_product_page_name_button">@string/item_product_name</string>
-    <string name="add_product_page_description_button">@string/item_product_description</string>
+    <string name="add_product_page_description_button">@string/item_product_description</string>-->
 
-    <string-array name="add_product_page_categorie_input">
+    <!--<string-array name="add_product_page_categorie_input">
         <item>Catégorie: Massages</item>
         <item>Catégorie: Fleurs</item>
         <item>Catégorie: Traiteur</item>
-    </string-array>
+    </string-array>-->
 
-        <string-array name="add_product_page_budget_input">
+      <!--  <string-array name="add_product_page_budget_input">
         <item>Budget: De 20€ à 30€</item>
         <item>Budget: De 30€ à 50€</item>
         <item>Budget: Au delà de 50€</item>
@@ -28,9 +28,14 @@
 
     <string name="add_product_page_confirm_button">Confirmer</string>-->
     
-    <!--Fenetre popup de détail
+    Fenetre popup de détail
     <string name="popup_product_name">Product name</string>
-    <string name="popup_product_description_title">Description</string>-->
+    <string name="popup_product_description_title">Description</string>
+    <string name="popup_product_description_subtitle">Petite description</string>
+    <string name="popup_product_category_title">Catégorie</string>
+    <string name="popup_product_category_subtitle">Fleurs</string>
+    <string name="popup_product_budget_title">Budget</string>
+    <string name="popup_product_budget_subtitle">De 20€ à 30€</string>
 
     <!--Product customise-->
     <string name="item_product_name">Nom du produit</string>
