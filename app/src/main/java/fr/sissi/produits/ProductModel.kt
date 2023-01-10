@@ -4,6 +4,8 @@ package fr.sissi.produits
 //Class qui permet d'enregistrer de nouveau produit sur l'application
 //contient la liste et toute les caractéristique d'un produit
 class ProductModel (
+    //id par défaut
+    val id: String = "produit0",
     //titre avec une valeur par défaut
     val name: String = "Massage",
     //descrition avec valeur par défaut

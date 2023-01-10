@@ -21,19 +21,22 @@ class ProductRepository {
     }
 
     //callback =liste d'instructions à passer après la récupération des données
+    //Unit = paquet d'instructions qui va s'exécuter
     fun updateData(callback: () -> Unit){
         //absorbe les données depuis la databaseRef et les donne à la liste de produits
-        //EvenListener évènement qu'on écoute et sur lequel il peut se passer quelque chose(ex: MAJ)
+        //EvenListener évènement qu'on écoute et sur lequel il peut se passer quelque chose(ex: MAJ bdd)
         databaseRef.addValueEventListener(object : ValueEventListener{
 
             //méthodes implémentées
             //La liste est récoltée
+            //absorber les données qui sont dans databaseRef et les donner à : liste de produit
             //Snapshot : objet qui contient toutes les données récupérées
             override fun onDataChange(snapshot: DataSnapshot) {
                 //retire les anciens produits pour recréer une liste toute neuve
                 productList.clear()
                 //boucle qui parcours chacun des éléments de Snapchot
                 //récolte la liste (tous les enfants)
+                //ds = data Snapshot
                 for (ds in snapshot.children) {
                     //construit un objet produit (avec les données ds)
                     val product = ds.getValue(ProductModel::class.java)
@@ -48,13 +51,14 @@ class ProductRepository {
                 callback()
             }
 
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
+            //si les éléments n'ont pas pu etre récoltés
+            override fun onCancelled(error: DatabaseError) {}
 
         })
 
     }
+            //mettre à jour un produit en bdd
+            //setValue met à jour la valeur actuelle de l'objet
+            fun updateProduct(product: ProductModel) = databaseRef.child(product.id).setValue(product)
 
 }

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import fr.sissi.produits.MainActivity
 import fr.sissi.produits.ProductModel
+import fr.sissi.produits.ProductRepository
 import fr.sissi.produits.R
 
 
@@ -59,6 +60,9 @@ class ProductAdapter(
         //Je récupère les infos du produit qui a cette position (la plante courrante)
         val currentProduct = productList[position]
 
+        //récupère le repository
+        val repo = ProductRepository()
+
         // utilisation de glide pour récupérer l'image à partir de son lien et l'ajouter au composant
 
         //context = bdd interne contenant toutes les infos du projet
@@ -78,6 +82,17 @@ class ProductAdapter(
             holder.starIcon.setImageResource(R.drawable.ic_like)
         }else{
             holder.starIcon.setImageResource(R.drawable.ic_unlike)
+
+            //rajouter une interaction sur L'étoile
+            holder.starIcon.setOnClickListener{
+                //invere si l'étoile est liké ou non
+                //es: si le produit est liké ça lui attribut l'inverse et inversement
+                currentProduct.liked = !currentProduct.liked
+                //met à jour l'objet plante
+                repo.updateProduct(currentProduct)
+
+            }
+
         }
     }
 

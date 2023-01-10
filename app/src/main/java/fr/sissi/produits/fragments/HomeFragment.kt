@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import fr.sissi.produits.MainActivity
 import fr.sissi.produits.ProductModel
+import fr.sissi.produits.ProductRepository.Singleton.productList
 import fr.sissi.produits.R
 import fr.sissi.produits.adapter.ProductAdapter
 import fr.sissi.produits.adapter.ProductItemDecoration
@@ -23,7 +24,7 @@ class HomeFragment (
         val view = inflater?.inflate(R.layout.fragment_home, container,false)
 
         //créer une liste qui va stocker les produits
-        val productList = arrayListOf<ProductModel>()
+        //val productList = arrayListOf<ProductModel>()
 
 
  /*     DONNÉES LOCALES EN DUR
