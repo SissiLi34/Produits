@@ -8,15 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import fr.sissi.produits.MainActivity
-import fr.sissi.produits.ProductModel
-import fr.sissi.produits.ProductRepository
-import fr.sissi.produits.R
+import fr.sissi.produits.*
 
 
 class ProductAdapter(
     //je récupère le context de mainActivity
-    private val context: MainActivity,
+    val context: MainActivity,
     //je récupère la liste des produits
     private val productList: List<ProductModel>,
     //je récupère une valeur privé avec le num du layout à passer (ici l'id pour tous les layout de recycler)
@@ -80,9 +77,10 @@ class ProductAdapter(
         if (currentProduct.liked) {
             //si c'est le cas, j'applique sur holder.StarIcon une nouvelle image de fond, l'étoile complète
             holder.starIcon.setImageResource(R.drawable.ic_like)
-        }else{
+        }
+        else {
             holder.starIcon.setImageResource(R.drawable.ic_unlike)
-
+        }
             //rajouter une interaction sur L'étoile
             holder.starIcon.setOnClickListener{
                 //invere si l'étoile est liké ou non
@@ -93,7 +91,15 @@ class ProductAdapter(
 
             }
 
-        }
+            //interction au clic sur un produit
+            //je récupère une vue sur laquelle je rajoute un évènement
+            holder.itemView.setOnClickListener {
+                //affiche la popup avec cette nouvelle instance et l'adapter (this) et l'afficher
+                ProductPopup(this).show()
+            }
+
+
+
     }
 
 

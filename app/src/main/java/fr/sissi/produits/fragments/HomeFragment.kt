@@ -17,6 +17,7 @@ import fr.sissi.produits.adapter.ProductItemDecoration
 class HomeFragment (
     //je récupère le context de MainActivity
     private val context: MainActivity
+    //CollectionFragment hérite de la class d'Android
         ): Fragment() {
 
 
@@ -28,7 +29,7 @@ class HomeFragment (
 
 
  /*     DONNÉES LOCALES EN DUR
- 
+
        //enregistrer produit
         productList.add(
             ProductModel(
@@ -54,17 +55,12 @@ class HomeFragment (
                 liked = false
             ))
 
-        productList.add(
-            ProductModel(
-                name = "Lunch",
-                description = "Lunch végan",
-                imageURL = "https://cdn.pixabay.com/photo/2017/12/23/15/54/food-3035432_1280.jpg",
-                liked = false
-            ))
+
 */
 
         //récupération de la vue du recyclerView horizontal avec les détails des produits
         val horizontalRecyclerView = view?.findViewById<RecyclerView>(R.id.horizontal_recycler_view)
+
         //les produits se chargent automatiquement
         //je précise quel layout je veux utiliser --> ProductAdapter avec juste un id
         if (horizontalRecyclerView != null) {

@@ -133,9 +133,9 @@
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_trash"
+        android:layout_marginRight="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/view_separation"
         app:layout_constraintEnd_toStartOf="@+id/view_separation"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view_separation"
         />
 
@@ -143,12 +143,12 @@
         android:id="@+id/star_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_margintop="40dp"
         android:src="@drawable/ic_unlike"
-        app:layout_constraintBottom_toBottomOf="@+id/delete_button"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_separation"
         app:layout_constraintStart_toEndOf="@+id/view_separation"
-        />
+        app:layout_constraintTop_toTopOf="@+id/view_separation" />
 
 
 
