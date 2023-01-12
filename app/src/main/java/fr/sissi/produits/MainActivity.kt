@@ -2,6 +2,7 @@ package fr.sissi.produits
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import fr.sissi.produits.fragments.AddProductFragment
 import fr.sissi.produits.fragments.CollectionFragment
 import fr.sissi.produits.fragments.HomeFragment
 
@@ -22,8 +23,8 @@ class MainActivity : AppCompatActivity() {
             //supportFragment gère les fragment sur Android et begin permet la manipulation de ces derniers
             val transaction = supportFragmentManager.beginTransaction()
             //je remplace le container (layout fragment_container) par fragment HomeFragment
-            //transaction.replace(R.id.fragment_container, HomeFragment(this))
-            transaction.replace(R.id.fragment_container, CollectionFragment(this))
+            transaction.replace(R.id.fragment_container, HomeFragment(this))
+            //transaction.replace(R.id.fragment_container, AddProductFragment(this))
             //j'ajoute un retour null
             transaction.addToBackStack(null)
             //j'envoie les changements
