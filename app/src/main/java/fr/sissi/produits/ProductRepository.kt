@@ -61,4 +61,7 @@ class ProductRepository {
             //setValue met à jour la valeur actuelle de l'objet
             fun updateProduct(product: ProductModel) = databaseRef.child(product.id).setValue(product)
 
+            //suprimer un produit de la bdd
+            fun deleteProduct (product: ProductModel) = databaseRef.child(product.id).removeValue()
+
 }

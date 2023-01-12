@@ -91,18 +91,15 @@ class ProductAdapter(
 
             }
 
-            //interction au clic sur un produit
+            //interaction au clic sur un produit
             //je récupère une vue sur laquelle je rajoute un évènement
             holder.itemView.setOnClickListener {
-                //affiche la popup avec cette nouvelle instance et l'adapter (this) et l'afficher
-                ProductPopup(this).show()
+                //affiche la popup avec le paramètre (context) adapter (this) et l'afficher
+                ProductPopup(this, currentProduct).show()
             }
-
-
-
     }
 
 
-    //affiche automatiquement le nombre d'item existant
-    override fun getItemCount(): Int = productList.size
+          //affiche automatiquement le nombre d'item existant
+          override fun getItemCount(): Int = productList.size
 }

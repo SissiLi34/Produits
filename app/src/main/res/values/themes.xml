@@ -13,12 +13,19 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
+       <!-- <item name="android:spinnerItemStyle">@style/DefaultTextStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/DefaultTextStyle</item>-->
+
+    </style>
+
+
+
         <!--Creer le composant du titre par defaut-->
         <!--pack qui regroupe différentes propriétés qui composent un design
         <style name="DefaultTextStyle">
             <item name="android:textColor">@color/lightGray</item>
             <item name="android:textSize">18sp</item>
-            <item name="android:fontFamily">@font/lato</item>
+            <item name="android:fontFamily">@font/lato_regular</item>
         </style>-->
 
         <!--Les sous-titres ont la même caractéristique que l'ecriture par défaut
@@ -33,5 +40,5 @@
             <item name="android:fontFamily">@font/lato_bold.ttf</item>
         </style>-->
 
-    </style>
+
 </resources>
