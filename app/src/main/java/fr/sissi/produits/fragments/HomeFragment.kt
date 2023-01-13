@@ -64,7 +64,8 @@ class HomeFragment (
         //les produits se chargent automatiquement
         //je précise quel layout je veux utiliser --> ProductAdapter avec juste un id
         if (horizontalRecyclerView != null) {
-            horizontalRecyclerView.adapter = ProductAdapter(context, productList, R.layout.item_horizontal_product)
+            //je ne veux afficher sur la page d'accueil que les produit non liked
+            horizontalRecyclerView.adapter = ProductAdapter(context, productList.filter { !it.liked }, R.layout.item_horizontal_product)
 
         //récupération du second recyclerView vertical avec les détails des produits
             val  verticalRecyclerView = view.findViewById<RecyclerView>(R.id.vertical_recycler_view)

@@ -3,9 +3,14 @@
 
     <string name="home_page_title">Accueil</string>
     <string name="home_page_last_product_section">Dernières sélections</string>
+    
+    <string name="bottom_home_item">Accueil</string>
+    <string name="bottom_selection_item">Mes sélections</string>
+    <string name="bottom_add_product_item">Ajouter</string>
 
-   <!--  Page mes selections
-     <string name="selection_page_title">Mes sélections</string>-->
+   <!--  Page mes selections-->
+    <string name="selection_page_title">Mes sélections</string>
+     <string name="add_product_page_title">Mes sélections</string>
 
 
     <!--Page ajout de produits-->

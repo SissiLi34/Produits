@@ -17,8 +17,17 @@
         <item name="android:spinnerDropDownItemStyle">@style/DefaultTextStyle</item>-->
 
     </style>
+<!--Style bottom_navigation_view-->
+<style name="BottomNavigationStyle" parent="Widget.Design.BottomNavigationView">
+    <item name="android:textSize">18sp</item>
+    <item name="fontFamily">@font/lato_regular</item>
+</style>
 
-
+    <!--Personnalisation barre navigation (bottom_navigation_view-->
+<style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+    <item name="android:textSize">18sp</item>
+    <item name="fontFamily">@font/lato_regular</item>
+</style>
 
         <!--Creer le composant du titre par defaut-->
         <!--pack qui regroupe différentes propriétés qui composent un design
