@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Spinner
+import androidx.activity.result.ActivityResultLauncher
 import androidx.fragment.app.Fragment
 import fr.sissi.produits.MainActivity
 import fr.sissi.produits.ProductModel
@@ -40,27 +41,33 @@ class AddProductFragment(
     ): View? {
        val view = inflater?.inflate(R.layout.fragment_add_product, container, false)
 
+
+
+
+
         //récupérer uploadImage pour lui associer un composant
-        if (view != null) {
-            uploadedImage = view.findViewById(R.id.preview_image)
-        }
+      //  if (view != null) {
+        //    uploadedImage = view.findViewById(R.id.preview_image)
+       // }
 
+        //OK 1
         //récupérer le bouton pour charger l'image
-        val pickupImageButton = view?.findViewById<Button>(R.id.upload_button)
+       // val pickupImageButton = view?.findViewById<Button>(R.id.upload_button)
 
+        //OK 2
         //lorsque le bouton est clické il ouvre les images du téléphone
-        if (pickupImageButton != null) {
+       // if (pickupImageButton != null) {
             //évènement associé au click qui déclanche la méthode pickupImage
-            pickupImageButton.setOnClickListener { pickupImage()}
-        }
+          //  pickupImageButton.setOnClickListener { pickupImage()}
+      //  }
 
         //récupération du bouton enregistrer
-        val confirmButton = view?.findViewById<Button>(R.id.confirm_button)
+       // val confirmButton = view?.findViewById<Button>(R.id.confirm_button)
         //au click la méthode sendForm envoie le form
-        if (confirmButton != null) {
+       // if (confirmButton != null) {
             //je passe la vue qui contient tous les élements
-            confirmButton.setOnClickListener{ sendForm(view)}
-        }
+         //   confirmButton.setOnClickListener{ sendForm(view)}
+     //   }
 
         return view
     }
@@ -107,21 +114,28 @@ class AddProductFragment(
 
     }
 
-    //méthode qui ouvre les image du téléphone
-    private fun pickupImage() {
-        val intent = Intent()
+    //OK 3
+    //méthode qui ouvre les images du téléphone,intent ouvre les contact etc
+   // private fun pickupImage() {
+       // val intent = Intent()
         //je passe le type d'action que je souhaite
-        intent.type = "image/"
-        //je définis le type d'action que je veux faire avec ces images (récupération)
-        intent.action = Intent.ACTION_GET_CONTENT
-        //Déclancher l'action et attendre le résultat
-       //tarActivityForResult(Intent.createChooser(intent,"Select Picture"), 40)
+       // intent.type = "image/"
+        //je définis le type d'action que je veux faire avec ces images (récupération au click)
+       // intent.action = Intent.ACTION_GET_CONTENT
 
-    }
+        //Démarer une instruction et attendre le résultat
+        //starActivityForResult(Intent.createChooser(intent,"Select Picture"), 40)
+
+        //test nouveau staractivity
+        //ActivityResultLauncher<Intent> = new Intent()
+
+    //}
 
 
 
-    //override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+//récolter ce qu'on a récupérer
+
+   // override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 
         //vérification
        // if(requestCode == 40 && resultCode == Activity.RESULT_OK){
