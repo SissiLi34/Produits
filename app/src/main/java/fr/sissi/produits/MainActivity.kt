@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+
         //première page de connection
         loadFragment(HomeFragment(this), R.string.home_page_title)
 
