@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         //première page de connection
         loadFragment(HomeFragment(this), R.string.home_page_title)
 
-
         //importation de la bottomNavigationView
         val navigationItemView = findViewById<BottomNavigationView>(R.id.navigation_view)
         //évènement au click
@@ -40,12 +39,8 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(AddProductFragment(this), R.string.add_product_page_title)
                 true
                 }
-
             }
-
         }
-
-
     }
 
     private fun loadFragment(fragment: Fragment, string: Int) {
@@ -72,8 +67,6 @@ class MainActivity : AppCompatActivity() {
             transaction.addToBackStack(null)
             //j'envoie les changements
             transaction.commit()
-
         }
-
     }
 }

@@ -1,20 +1,11 @@
 package fr.sissi.produits
 
-import android.net.Uri
-import com.google.android.gms.tasks.Continuation
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.UploadTask
 import fr.sissi.produits.ProductRepository.Singleton.databaseRef
-//import fr.sissi.produits.ProductRepository.Singleton.downloadUri
 import fr.sissi.produits.ProductRepository.Singleton.productList
-//import fr.sissi.produits.ProductRepository.Singleton.storageReference
-import java.util.UUID
 
 
 class ProductRepository {
@@ -71,49 +62,8 @@ class ProductRepository {
 
             //si les éléments n'ont pas pu etre récoltés
             override fun onCancelled(error: DatabaseError) {}
-
         })
-
     }
-
-            //fonction qui envoie des fichiers sur le storage
-    //je passe le fichier interne
-          //  fun uploadImage(file: Uri, callback: () -> Unit){
-                //vérification du fichier non null (invalide)
-             //   if(file != null){
-                    //pour envoyer un fichier il faut lui donner un nom (ici au hasard) en text et le covertir en image jpg
-                  //  val fileName = UUID.randomUUID().toString() + ".jpg"
-                    //création d'une référence pour l'image avec le nom du fichier
-                  //  val ref = storageReference.child(fileName)
-                    //envoie le fichier dans une tache d'envoi
-                   // val uploadTask = ref.putFile(file)
-
-                    //démarage de la tache d'envoi
-                  //  uploadTask.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>>{task ->
-
-                        //il y a t'il eut un problème lors de l'envoi du fichier
-
-                    //    if (!task.isSuccessful) {
-                     //       task.exception?.let { throw it }
-                       // }
-
-                        //renvoyer pour indiquer quel est le lien de référence
-                     //   return@Continuation ref.downloadUrl
-
-                //    }).addOnCompleteListener { task ->
-                        //vérifier si tout à bien fonctionner
-                   //     if (task.isSuccessful) {
-                            //je peux récupérer l'image en ligne sur le bucket
-                    //        downloadUri = task.result
-                    //        callback()
-                     //   }
-
-                  //  }
-
-//}
-
-           // }
-
             //mettre à jour un produit en bdd
             //setValue met à jour la valeur actuelle de l'objet
             fun updateProduct(product: ProductModel) = databaseRef.child(product.id).setValue(product)
@@ -123,5 +73,4 @@ class ProductRepository {
 
             //suprimer un produit de la bdd
             fun deleteProduct (product: ProductModel) = databaseRef.child(product.id).removeValue()
-
 }

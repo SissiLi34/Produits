@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import fr.sissi.produits.MainActivity
-import fr.sissi.produits.ProductModel
 import fr.sissi.produits.ProductRepository.Singleton.productList
 import fr.sissi.produits.R
 import fr.sissi.produits.adapter.ProductAdapter
@@ -24,10 +23,10 @@ class HomeFragment (
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saveInstanceState: Bundle?): View? {
         val view = inflater?.inflate(R.layout.fragment_home, container,false)
 
+
+
         //créer une liste qui va stocker les produits
         //val productList = arrayListOf<ProductModel>()
-
-
  /*     DONNÉES LOCALES EN DUR
 
        //enregistrer produit
@@ -54,8 +53,6 @@ class HomeFragment (
                 imageURL = "https://cdn.pixabay.com/photo/2019/04/06/19/22/glass-4108085_1280.jpg",
                 liked = false
             ))
-
-
 */
 
         //récupération de la vue du recyclerView horizontal avec les détails des produits

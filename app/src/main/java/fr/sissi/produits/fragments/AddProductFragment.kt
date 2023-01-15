@@ -1,8 +1,6 @@
 package fr.sissi.produits.fragments
 
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -19,6 +17,8 @@ import fr.sissi.produits.ProductRepository
 import fr.sissi.produits.R
 import java.util.UUID
 
+
+//je récupère le fragment pour pouvoir le manipuler
 class AddProductFragment(
     //je récupère le context MainActivity
     private val context: MainActivity
@@ -27,9 +27,9 @@ class AddProductFragment(
 
     //attribut accessible de partout
     //var car variable (val fixe)
-
     private var file: Uri? = null
     private var uploadedImage:ImageView? = null
+
 
     //injection du layout
     @SuppressLint("MissingInflatedId")
@@ -40,30 +40,19 @@ class AddProductFragment(
     ): View? {
        val view = inflater?.inflate(R.layout.fragment_add_product, container, false)
 
-        //récupérer uploadImage pour lui associer un composant
-        if (view != null) {
-            uploadedImage = view.findViewById(R.id.preview_image)
-        }
-
-        //récupérer le bouton pour charger l'image
-        val pickupImageButton = view?.findViewById<Button>(R.id.upload_button)
-
-        //lorsque le bouton est clické il ouvre les images du téléphone
-        if (pickupImageButton != null) {
-            //évènement associé au click qui déclanche la méthode pickupImage
-            pickupImageButton.setOnClickListener { pickupImage()}
-        }
 
         //récupération du bouton enregistrer
-        val confirmButton = view?.findViewById<Button>(R.id.confirm_button)
+       val confirmButton = view?.findViewById<Button>(R.id.confirm_button)
         //au click la méthode sendForm envoie le form
-        if (confirmButton != null) {
+       if (confirmButton != null) {
             //je passe la vue qui contient tous les élements
-            confirmButton.setOnClickListener{ sendForm(view)}
-        }
+           confirmButton.setOnClickListener{ sendForm(view)}
+       }
 
         return view
     }
+
+
         //méthode d'envoi du form
         private fun sendForm(view: View) {
             //récupération de l'image à l'enregistrement
@@ -98,46 +87,7 @@ class AddProductFragment(
                 budget
                 )
 
-
                 //envoi bdd
                 repo.insertProduct(product)
             }
-
-
-
-    }
-
-    //méthode qui ouvre les image du téléphone
-    private fun pickupImage() {
-        val intent = Intent()
-        //je passe le type d'action que je souhaite
-        intent.type = "image/"
-        //je définis le type d'action que je veux faire avec ces images (récupération)
-        intent.action = Intent.ACTION_GET_CONTENT
-        //Déclancher l'action et attendre le résultat
-       //tarActivityForResult(Intent.createChooser(intent,"Select Picture"), 40)
-
-    }
-
-
-
-    //override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-
-        //vérification
-       // if(requestCode == 40 && resultCode == Activity.RESULT_OK){
-
-            //je vérifie si les données sont nulles
-           // if (data == null || data.data == null) return
-
-            //si c'est valide je récupère l'image sélectionnée
-            //val file = data.data
-
-            //met à jour l'apperçu de l'image
-            //uploadedImage?.setImageURI(file)
-
-            //heberger sur le bucket
-           // val repo= ProductRepository()
-            //repo.uploadImage(file!!)
-        //}
-    //}
-//}
+}

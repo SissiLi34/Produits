@@ -49,8 +49,8 @@ class ProductAdapter(
 //onCreateViewHolder attend qu'on lui donne
         //j'ai généré la vue que je dois passer dans les paramètres
         return ViewHolder(view)
-
     }
+
 
     //permet de mettre à jour chaque modèle avec le bon produit
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -88,7 +88,6 @@ class ProductAdapter(
                 currentProduct.liked = !currentProduct.liked
                 //met à jour l'objet plante
                 repo.updateProduct(currentProduct)
-
             }
 
             //interaction au clic sur un produit
@@ -98,7 +97,6 @@ class ProductAdapter(
                 ProductPopup(this, currentProduct).show()
             }
     }
-
 
           //affiche automatiquement le nombre d'item existant
           override fun getItemCount(): Int = productList.size
