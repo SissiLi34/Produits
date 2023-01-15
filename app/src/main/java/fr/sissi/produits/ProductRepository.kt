@@ -12,12 +12,6 @@ class ProductRepository {
 
     //singleton structure qui permet d'ajouter un nouvel objet dans la liste
     object Singleton {
-        //propriété qui va générer le lien de connection au bucket (lien de firebase)
-        //private val BUCKET_URL: String = "gs://produits-e8070.appspot.com/"
-
-        //connection à l'espace de stockage
-        //bucket_url = nom donné au lien de connection
-      //  val storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(BUCKET_URL)
 
         //connection à la référence 'Produits'
         val databaseRef = FirebaseDatabase.getInstance().getReference("Produits")
@@ -25,13 +19,12 @@ class ProductRepository {
         //création d'une liste qui contient les produits
         val productList = arrayListOf<ProductModel>()
 
-        //contenir le lien de l'image courante
-       // var downloadUri: Uri? = null
     }
 
     //callback =liste d'instructions à passer après la récupération des données
     //Unit = paquet d'instructions qui va s'exécuter
     fun updateData(callback: () -> Unit){
+
         //absorbe les données depuis la databaseRef et les donne à la liste de produits
         //EvenListener évènement qu'on écoute et sur lequel il peut se passer quelque chose(ex: MAJ bdd)
         databaseRef.addValueEventListener(object : ValueEventListener{

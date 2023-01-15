@@ -48,7 +48,6 @@ class AddProductFragment(
             //je passe la vue qui contient tous les élements
            confirmButton.setOnClickListener{ sendForm(view)}
        }
-
         return view
     }
 
@@ -57,9 +56,7 @@ class AddProductFragment(
         private fun sendForm(view: View) {
             //récupération de l'image à l'enregistrement
             val repo = ProductRepository()
-            //lien du fichier
-            //repo.uploadImage(file!!) {
-                //récupération du nom
+                //récupération du nom (toString pour avoir le contenu)
                 val productName = view.findViewById<EditText>(R.id.name_input).text.toString()
                 //récupération de la valeur de la description
                 val productDescription = view.findViewById<EditText>(R.id.description_input).text.toString()
@@ -67,8 +64,6 @@ class AddProductFragment(
                 val category = view.findViewById<Spinner>(R.id.category_spinner).selectedItem.toString()
                 //récupération budget
                 val budget = view.findViewById<Spinner>(R.id.budget_spinner).selectedItem.toString()
-                //récupération du lien d'une image
-               // val downloadImageUrl = downLoadUri
 
 
                 //CONSTRUCTION NOUVEL OBGET A PARTIR DU FORMULAIRE
